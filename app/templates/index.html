@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href={{ url_for('pena') }}>Click Here To PENA Page</a><br>
+	<a href={{ url_for('profile') }}>Click Here To Profile Page</a>
+	<p>
+		{{ data[0].author}}
+		{{ data[0].post}}
+
+		{% for i in data %}
+		<h1>{{ i.author }}</h1>
+		<h1>{{ i.post }}</h1>
+		<h1>{{ i.date }}</h1>
+		{% endfor %}
+	</p>
+</body>
+</html>
